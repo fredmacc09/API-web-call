@@ -35,7 +35,7 @@ public class WebApiCall {
                 urlData = urlData + "\n" + urlStream.nextLine();
                 urlData = urlData.replace(" ", " ").replace("\"", " ").replace(",", "\n");
 
-
+            urlStream.close();
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -49,6 +49,7 @@ public class WebApiCall {
         WebApiCall webCall = new WebApiCall();
         String data = webCall.getURLData(choice); //you can enter any movie choice here
         System.out.println(data);
+        keyboard.close();
 
 
     }
